@@ -2,41 +2,41 @@ layout: {zmk_keyboard: keyball44}
 layers:
   QWRT:
   - {t: '$$mdi:keyboard-esc$$', h: FUN}
-  - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
-  - A
-  - S
-  - D
-  - F
+  - .
+  - {t: '-', s: _}
   - G
-  - H
+  - P
+  - Q
+  - D
+  - E
+  - {t: ',', s: <}
   - J
-  - K
-  - L
-  - {t: ;, s: ':'}
   - {t: '''', s: '"'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
+  - K
+  - I
+  - A
+  - T
+  - H
+  - R
+  - N
+  - O
+  - U
+  - S
+  - {t: ;, s: ':'}
   - $$mdi:apple-keyboard-shift$$
-  - Z
+  - F
   - X
   - C
-  - V
-  - B
-  - N
   - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - Z
+  - B
+  - Y
+  - V
+  - L
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: \, s: '|'}
   - $$mdi:apple-keyboard-option$$
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
@@ -44,7 +44,7 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:keyboard-return$$', h: NUM}
-  - $$mdi:backspace-reverse-outline$$
+  - PRINTSCREEN
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -195,8 +195,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - (
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
+  - '&dbl_ctrl'
+  - '&dbl_shft'
   - {t: '=', s: +}
   - +
   - $$mdi:arrow-left-bold$$
