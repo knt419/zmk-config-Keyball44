@@ -78,16 +78,32 @@
         };
     };
 
+    macros {
+        dbl_shft: dbl_shft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT &kp LEFT_SHIFT>;
+            label = "DBL_SHFT";
+        };
+
+        dbl_ctrl: dbl_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LCTRL>;
+            label = "DBL_CTRL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             label = "QWRT";
             bindings = <
-&lt 6 ESCAPE    &kp Q      &kp W      &kp E                 &kp R         &kp T              &kp Y        &kp U  &kp I      &kp O    &kp P      &kp BACKSPACE
-&mt LCTRL TAB   &kp A      &kp S      &kp D                 &kp F         &kp G              &kp H        &kp J  &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LEFT_SHIFT  &kp Z      &kp X      &kp C                 &kp V         &kp B              &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp RIGHT_SHIFT
-&kp LEFT_ALT    &mkp RCLK  &mkp LCLK  &mt LEFT_SHIFT SPACE  &kp LEFT_GUI             &BSDEL  &lt 4 ENTER                                        &kp DELETE
+&lt 6 ESCAPE    &kp W      &kp PERIOD  &kp MINUS             &kp G         &kp P              &kp Q        &kp D  &kp E  &kp COMMA  &kp J      &kp SQT
+&mt LCTRL TAB   &kp K      &kp I       &kp A                 &kp T         &kp H              &kp R        &kp N  &kp O  &kp U      &kp S      &kp SEMICOLON
+&kp LEFT_SHIFT  &kp F      &kp X       &kp C                 &kp M         &kp Z              &kp B        &kp Y  &kp V  &kp L      &kp SLASH  &kp BACKSLASH
+&kp LEFT_ALT    &mkp RCLK  &mkp LCLK   &mt LEFT_SHIFT SPACE  &kp LEFT_GUI             &BSDEL  &lt 4 ENTER                                      &kp PRINTSCREEN
             >;
         };
 
@@ -125,7 +141,7 @@
             label = "NUM";
             bindings = <
 &none   &kp F1                &kp F2        &kp F3                &kp F4        &kp F5                &kp F6        &kp F7    &kp F8        &kp F9     &kp F10                &none
-&none   &kp LEFT_PARENTHESIS  &kp DOWN      &kp UP_ARROW          &kp EQUAL     &kp PLUS              &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp RIGHT_PARENTHESIS  &none
+&none   &kp LEFT_PARENTHESIS  &dbl_ctrl     &dbl_shft             &kp EQUAL     &kp PLUS              &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp RIGHT_PARENTHESIS  &none
 &none   &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                &kp NUMBER_6  &kp N7    &kp N8        &kp N9     &kp N0                 &none
 &trans  &trans                &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp PERIOD                  &trans  &trans                                                                  &trans
             >;
