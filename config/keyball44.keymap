@@ -64,12 +64,12 @@
 
         bootloader_r {
             bindings = <&bootloader>;
-            key-positions = <11 23>;
+            key-positions = <23 11>;
         };
 
         bootloader_l {
             bindings = <&bootloader>;
-            key-positions = <0 12>;
+            key-positions = <1 13>;
         };
 
         studio {
@@ -100,10 +100,10 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&lt 6 ESCAPE    &kp W      &kp PERIOD  &kp MINUS             &kp G         &kp P              &kp Q        &kp D  &kp E  &kp COMMA  &kp J      &kp SQT
-&mt LCTRL TAB   &kp K      &kp I       &kp A                 &kp T         &kp H              &kp R        &kp N  &kp O  &kp U      &kp S      &kp SEMICOLON
-&kp LEFT_SHIFT  &kp F      &kp X       &kp C                 &kp M         &kp Z              &kp B        &kp Y  &kp V  &kp L      &kp SLASH  &kp BACKSLASH
-&kp LEFT_ALT    &mkp RCLK  &mkp LCLK   &mt LEFT_SHIFT SPACE  &kp LEFT_GUI             &BSDEL  &lt 4 ENTER                                      &kp PRINTSCREEN
+&lt 6 ESCAPE             &kp W      &kp PERIOD  &kp MINUS             &kp G                    &kp P              &kp Q        &kp D  &kp E  &kp COMMA  &kp J      &kp SQT
+&mt LCTRL TAB            &kp K      &kp I       &kp A                 &kp T                    &kp H              &kp R        &kp N  &kp O  &kp U      &kp S      &kp SEMICOLON
+&kp LEFT_SHIFT           &kp F      &kp X       &kp C                 &kp M                    &kp Z              &kp B        &kp Y  &kp V  &kp L      &kp SLASH  &kp BACKSLASH
+&mt LEFT_ALT LANGUAGE_2  &mkp RCLK  &mkp LCLK   &mt LEFT_SHIFT SPACE  &mt LEFT_GUI LANGUAGE_1             &BSDEL  &lt 4 ENTER                                      &kp PRINTSCREEN
             >;
         };
 
