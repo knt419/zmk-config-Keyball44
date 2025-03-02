@@ -37,11 +37,11 @@ layers:
   - L
   - {t: /, s: '?'}
   - {t: \, s: '|'}
-  - $$mdi:apple-keyboard-option$$
+  - {t: LANGUAGE 2, h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:apple-keyboard-command$$
+  - {t: LANGUAGE 1, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:keyboard-return$$', h: NUM}
   - PRINTSCREEN
@@ -316,9 +316,9 @@ layers:
   - FUN
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [11, 23]
+- p: [23, 11]
   k: $$mdi:progress-download$$
-- p: [0, 12]
+- p: [1, 13]
   k: $$mdi:progress-download$$
 - p: [25, 26]
   k: '&studio_unlock'
