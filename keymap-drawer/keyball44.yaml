@@ -6,12 +6,12 @@ layers:
   - .
   - {t: '-', s: _}
   - G
-  - P
+  - Z
   - Q
   - D
   - E
   - {t: ',', s: <}
-  - J
+  - P
   - {t: '''', s: '"'}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
   - K
@@ -30,7 +30,7 @@ layers:
   - X
   - C
   - M
-  - Z
+  - J
   - B
   - Y
   - V
@@ -38,7 +38,7 @@ layers:
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - {t: LANGUAGE 2, h: '$$mdi:apple-keyboard-option$$'}
-  - $$mdi:mouse-right-click-outline$$
+  - {t: LANG2, h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: LANGUAGE 1, h: '$$mdi:apple-keyboard-command$$'}
