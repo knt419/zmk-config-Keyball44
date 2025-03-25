@@ -2,22 +2,22 @@ layout: {zmk_keyboard: keyball44}
 layers:
   QWRT:
   - {t: '$$mdi:keyboard-esc$$', h: FUN}
-  - W
-  - .
-  - {t: '-', s: _}
-  - G
-  - Z
   - Q
+  - G
+  - {t: '-', s: _}
+  - W
+  - Z
+  - X
   - D
   - E
   - {t: ',', s: <}
   - P
   - {t: '''', s: '"'}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
-  - K
   - I
-  - A
   - T
+  - A
+  - K
   - H
   - R
   - N
@@ -27,7 +27,7 @@ layers:
   - {t: ;, s: ':'}
   - $$mdi:apple-keyboard-shift$$
   - F
-  - X
+  - .
   - C
   - M
   - J
