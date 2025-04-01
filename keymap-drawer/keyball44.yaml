@@ -3,9 +3,9 @@ layers:
   QWRT:
   - {t: '$$mdi:keyboard-esc$$', h: FUN}
   - Q
-  - G
-  - {t: '-', s: _}
   - W
+  - {t: '-', s: _}
+  - R
   - Z
   - X
   - D
@@ -18,8 +18,8 @@ layers:
   - T
   - A
   - K
+  - G
   - H
-  - R
   - N
   - O
   - U
