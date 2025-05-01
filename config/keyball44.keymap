@@ -31,24 +31,6 @@
     // custom shift using mod-morph 
 
     behaviors {
-        cmqus: comma_question {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_QUESTION";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp QUESTION>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        dtsmi: dot_semi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_SEMI";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp SEMI>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         BSDEL: BSDEL {
             compatible = "zmk,behavior-mod-morph";
             label = "BSDEL";
@@ -62,20 +44,32 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LEFT_PARENTHESIS";
             #binding-cells = <0>;
-            bindings =
-                <&kp LEFT_PARENTHESIS>,
-                <&kp LEFT_BRACE>,
-                <&kp LEFT_BRACKET>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp LEFT_BRACE>;
         };
 
         right_parenthesis: right_parenthesis {
             compatible = "zmk,behavior-tap-dance";
             label = "RIGHT_PARENTHESIS";
             #binding-cells = <0>;
-            bindings =
-                <&kp RIGHT_PARENTHESIS>,
-                <&kp RIGHT_BRACE>,
-                <&kp RIGHT_BRACKET>;
+            bindings = <&kp RIGHT_PARENTHESIS>, <&kp RIGHT_BRACE>;
+        };
+
+        left_kakko: left_kakko {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_KAKKO";
+            bindings = <&left_parenthesis>, <&kp LEFT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        right_kakko: right_kakko {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_KAKKO";
+            bindings = <&right_parenthesis>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -155,10 +149,10 @@
         number_layer {
             label = "NUM";
             bindings = <
-&trans  &kp F1             &kp F2        &kp F3                &kp F4        &kp F5                &kp F6        &kp F7    &kp F8        &kp F9     &kp F10             &trans
-&trans  &left_parenthesis  &dbl_ctrl     &dbl_shft             &kp EQUAL     &kp PLUS              &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &right_parenthesis  &trans
-&trans  &kp NUMBER_1       &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                &kp NUMBER_6  &kp N7    &kp N8        &kp N9     &kp N0              &trans
-&trans  &trans             &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp PERIOD                  &trans  &trans                                           &trans
+&trans  &kp F1        &kp F2        &kp F3                &kp F4        &kp F5                &kp F6        &kp F7    &kp F8        &kp F9     &kp F10       &trans
+&trans  &left_kakko   &dbl_ctrl     &dbl_shft             &kp EQUAL     &kp PLUS              &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &right_kakko  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                &kp NUMBER_6  &kp N7    &kp N8        &kp N9     &kp N0        &trans
+&trans  &trans        &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp PERIOD                  &trans  &trans                                           &trans
             >;
         };
 
