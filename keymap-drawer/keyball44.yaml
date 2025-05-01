@@ -194,7 +194,7 @@ layers:
   - F10
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&left_parenthesis'
+  - {t: '&left_parenthesis', s: '['}
   - '&dbl_ctrl'
   - '&dbl_shft'
   - {t: '=', s: +}
@@ -203,7 +203,7 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - '&right_parenthesis'
+  - {t: '&right_parenthesis', s: ']'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '1'
