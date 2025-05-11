@@ -71,6 +71,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        left_home: left_home {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_HOME";
+            bindings = <&kp LEFT_ARROW>, <&kp HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        right_end: right_end {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_END";
+            bindings = <&kp RIGHT_ARROW>, <&kp END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        up_pageup: up_pageup {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_PAGEUP";
+            bindings = <&kp UP_ARROW>, <&kp PAGE_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        down_pagedown: down_pagedown {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_PAGEDOWN";
+            bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -149,10 +185,10 @@
         number_layer {
             label = "NUM";
             bindings = <
-&trans  &kp F1        &kp F2        &kp F3                &kp F4        &kp F5                &kp F6        &kp F7    &kp F8        &kp F9     &kp F10       &trans
-&trans  &left_kakko   &dbl_ctrl     &dbl_shft             &kp EQUAL     &kp PLUS              &kp LEFT      &kp DOWN  &kp UP_ARROW  &kp RIGHT  &right_kakko  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                &kp NUMBER_6  &kp N7    &kp N8        &kp N9     &kp N0        &trans
-&trans  &trans        &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp PERIOD                  &trans  &trans                                           &trans
+&trans     &kp F1        &kp F2        &kp F3                &kp F4        &kp F5                &kp F6        &kp F7          &kp F8      &kp F9      &kp F10       &trans
+&trans     &left_kakko   &dbl_ctrl     &dbl_shft             &kp EQUAL     &kp PLUS              &left_home    &down_pagedown  &up_pageup  &right_end  &right_kakko  &trans
+&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0        &trans
+&kp ASTRK  &kp SLASH     &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp PERIOD                  &trans  &trans                                                &trans
             >;
         };
 
