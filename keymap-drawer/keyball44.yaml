@@ -199,10 +199,10 @@ layers:
   - '&dbl_shft'
   - {t: '=', s: +}
   - +
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:arrow-left-bold$$', s: HOME}
+  - {t: '$$mdi:arrow-down-bold$$', s: PgDn}
+  - {t: '$$mdi:arrow-up-bold$$', s: PgUp}
+  - {t: '$$mdi:arrow-right-bold$$', s: END}
   - {t: '&right_parenthesis', s: ']'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -217,8 +217,8 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '*'
+  - {t: /, s: '?'}
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - .
