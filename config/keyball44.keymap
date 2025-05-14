@@ -78,7 +78,7 @@
             bindings = <&kp LEFT_ARROW>, <&kp HOME>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         right_end: right_end {
@@ -87,7 +87,7 @@
             bindings = <&kp RIGHT_ARROW>, <&kp END>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         up_pageup: up_pageup {
@@ -96,7 +96,7 @@
             bindings = <&kp UP_ARROW>, <&kp PAGE_UP>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         down_pagedown: down_pagedown {
@@ -105,7 +105,7 @@
             bindings = <&kp DOWN>, <&kp PAGE_DOWN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
