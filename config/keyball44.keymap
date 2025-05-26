@@ -107,6 +107,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        F1_F11: F1_F11 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F1_F11";
+            bindings = <&kp F1>, <&kp F11>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        F2_F12: F2_F12 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "F2_F12";
+            bindings = <&kp F2>, <&kp F12>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -145,7 +163,7 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&lt 6 ESCAPE    &kp Q               &kp W       &kp MINUS             &kp R                    &kp Z              &kp X        &kp D  &kp E  &kp COMMA  &kp P            &kp SQT
+&lt 5 ESCAPE    &kp Q               &kp W       &kp MINUS             &kp R                    &kp Z              &kp X        &kp D  &kp E  &kp COMMA  &kp P            &kp SQT
 &mt LCTRL TAB   &kp I               &kp T       &kp A                 &kp K                    &kp G              &kp H        &kp N  &kp O  &kp U      &kp S            &kp SEMICOLON
 &kp LEFT_SHIFT  &kp F               &kp PERIOD  &kp C                 &kp M                    &kp B              &kp J        &kp Y  &kp V  &kp L      &kp SLASH        &kp BACKSLASH
 &mkp RCLK       &mt LEFT_ALT LANG2  &mkp LCLK   &mt LEFT_SHIFT SPACE  &mt LEFT_GUI LANGUAGE_1             &BSDEL  &lt 4 ENTER                           &kp PRINTSCREEN
@@ -185,20 +203,10 @@
         number_layer {
             label = "NUM";
             bindings = <
-&kp GRAVE  &kp F1        &kp F2        &kp F3                &kp F4        &kp F5                &kp F6        &kp F7          &kp F8      &kp F9      &kp F10       &trans
-&trans     &left_kakko   &dbl_ctrl     &dbl_shft             &kp EQUAL     &kp PLUS              &left_home    &down_pagedown  &up_pageup  &right_end  &right_kakko  &trans
-&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0        &trans
-&kp ASTRK  &kp SLASH     &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp PERIOD                  &trans  &trans                                                &trans
-            >;
-        };
-
-        symbol_layer {
-            label = "SYM";
-            bindings = <
-&none   &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT              &kp CARET       &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none   &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans                   &kp MINUS       &kp EQUAL      &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SQT                &none
-&none   &trans           &trans        &trans        &trans        &trans                   &kp UNDERSCORE  &kp PLUS       &trans            &trans                &kp NON_US_BACKSLASH   &none
-&trans  &trans           &trans        &trans        &trans                         &trans  &trans                                                                 &trans
+&kp GRAVE  &F1_F11       &F2_F12       &kp F3                &kp F4        &kp F5                 &kp F6        &kp F7          &kp F8      &kp F9      &kp F10       &kp CARET
+&trans     &left_kakko   &kp SLASH     &kp ASTRK             &kp PLUS      &kp MINUS              &left_home    &down_pagedown  &up_pageup  &right_end  &right_kakko  &tog 4
+&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                 &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0        &kp PERIOD
+&dbl_ctrl  &dbl_shft     &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp EQUAL                    &trans  &trans                                                &trans
             >;
         };
 
@@ -208,7 +216,7 @@
 &none        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
 &bootloader  &bt BT_CLR    &none         &none         &none         &none                     &bt BT_CLR    &none         &none         &none         &none         &none
 &none        &none         &none         &none         &none         &none                     &none         &none         &none         &none         &none         &none
-&trans       &trans        &trans        &trans        &trans                          &trans  &mo 6                                                   &trans
+&trans       &trans        &trans        &trans        &trans                          &trans  &mo 5                                                   &trans
             >;
         };
     };
