@@ -204,7 +204,7 @@
             label = "NUM";
             bindings = <
 &kp GRAVE  &F1_F11       &F2_F12       &kp F3                &kp F4        &kp F5                 &kp F6        &kp F7          &kp F8      &kp F9      &kp F10       &kp CARET
-&trans     &left_kakko   &kp SLASH     &kp ASTRK             &kp PLUS      &kp MINUS              &left_home    &down_pagedown  &up_pageup  &right_end  &right_kakko  &tog 4
+&trans     &left_kakko   &kp SLASH     &kp ASTRK             &kp PLUS      &kp MINUS              &left_home    &down_pagedown  &up_pageup  &right_end  &right_kakko  &to 4
 &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                 &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0        &kp PERIOD
 &dbl_ctrl  &dbl_shft     &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp EQUAL                    &trans  &trans                                                &trans
             >;
