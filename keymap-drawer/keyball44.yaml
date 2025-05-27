@@ -194,7 +194,7 @@ layers:
   - F10
   - ^
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&left_parenthesis', s: '['}
+  - {t: '&left_parenthesis', s: '{'}
   - {t: /, s: '?'}
   - '*'
   - +
@@ -203,7 +203,7 @@ layers:
   - {t: '$$mdi:arrow-down-bold$$', s: PgDn}
   - {t: '$$mdi:arrow-up-bold$$', s: PgUp}
   - {t: '$$mdi:arrow-right-bold$$', s: END}
-  - {t: '&right_parenthesis', s: ']'}
+  - {t: '&right_parenthesis', s: '}'}
   - {t: NUM, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - '1'
@@ -221,7 +221,7 @@ layers:
   - '&dbl_shft'
   - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '=', s: +}
+  - {t: '=', h: '$$mdi:apple-keyboard-option$$', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
