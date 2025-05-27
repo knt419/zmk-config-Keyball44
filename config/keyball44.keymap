@@ -125,6 +125,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        left_kakko2: left_kakko2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_KAKKO2";
+            bindings = <&left_kakko>, <&kp LEFT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        right_kakko2: right_kakko2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_KAKKO2";
+            bindings = <&right_kakko>, <&kp RIGHT_BRACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
     };
 
     combos {
@@ -203,10 +221,10 @@
         number_layer {
             label = "NUM";
             bindings = <
-&kp GRAVE  &F1_F11       &F2_F12       &kp F3                &kp F4        &kp F5                 &kp F6        &kp F7          &kp F8      &kp F9      &kp F10       &kp CARET
-&trans     &left_kakko   &kp SLASH     &kp ASTRK             &kp PLUS      &kp MINUS              &left_home    &down_pagedown  &up_pageup  &right_end  &right_kakko  &to 4
-&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4  &kp N5                 &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0        &kp PERIOD
-&dbl_ctrl  &dbl_shft     &mkp RCLK     &mt LEFT_SHIFT SPACE  &kp EQUAL                    &trans  &trans                                                &trans
+&kp GRAVE  &F1_F11       &F2_F12       &kp F3                &kp F4              &kp F5                 &kp F6        &kp F7          &kp F8      &kp F9      &kp F10        &kp CARET
+&trans     &left_kakko2  &kp SLASH     &kp ASTRK             &kp PLUS            &kp MINUS              &left_home    &down_pagedown  &up_pageup  &right_end  &right_kakko2  &to 4
+&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3          &kp NUMBER_4        &kp N5                 &kp NUMBER_6  &kp N7          &kp N8      &kp N9      &kp N0         &kp PERIOD
+&dbl_ctrl  &dbl_shft     &mkp RCLK     &mt LEFT_SHIFT SPACE  &mt LEFT_ALT EQUAL                 &trans  &trans                                                &trans
             >;
         };
 
