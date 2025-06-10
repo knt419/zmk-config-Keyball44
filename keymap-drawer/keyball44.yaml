@@ -10,7 +10,7 @@ layers:
   - X
   - D
   - E
-  - {t: ',', s: <}
+  - L
   - P
   - {t: '''', s: '"'}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
@@ -34,7 +34,7 @@ layers:
   - J
   - Y
   - V
-  - L
+  - {t: ',', s: <}
   - {t: /, s: '?'}
   - {t: \, s: '|'}
   - $$mdi:mouse-right-click-outline$$
@@ -273,5 +273,3 @@ layers:
 combos:
 - p: [23, 11]
   k: $$mdi:progress-download$$
-- p: [25, 26]
-  k: '&studio_unlock'
