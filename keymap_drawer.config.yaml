@@ -1,6 +1,6 @@
 draw_config:
   n_columns: 1
-  draw_key_sides: true
+  draw_key_sides: false
   key_w: 60.0
   key_h: 56.0
   split_gap: 30.0
@@ -8,6 +8,7 @@ draw_config:
   combo_h: 26.0
   key_rx: 6.0
   key_ry: 6.0
+  dark_mode: true
   inner_pad_w: 2.0
   inner_pad_h: 2.0
   outer_pad_w: 40.0
@@ -28,7 +29,7 @@ draw_config:
 
     /* Color accent for held keys */
     rect.held, rect.combo.held {
-        fill: #ffc;
+        fill: #96c9c5;
     }
 
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
@@ -113,7 +114,7 @@ parse_config:
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
   trans_legend:
-    tap: $$mdi:transfer$$
+    tap: $$tabler:fold-down$$
     type: trans
 
   raw_binding_map:
@@ -402,6 +403,7 @@ parse_config:
     LG: $$mdi:apple-keyboard-command$$
     LEFT_GUI: $$mdi:apple-keyboard-command$$
     LEFT_COMMAND: $$mdi:apple-keyboard-command$$
+    LEFT_WIN: $$mdi:microsoft-windows$$
     RCTRL: $$mdi:apple-keyboard-control$$
     RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
     RALT: $$mdi:apple-keyboard-option$$
@@ -411,6 +413,7 @@ parse_config:
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
     RG: $$mdi:apple-keyboard-command$$
+    RIGHT_WIN: $$mdi:microsoft-windows$$
     PSCRN: $$mdi:printer-outline$$
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP:
@@ -424,6 +427,10 @@ parse_config:
        shifted: ''
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
+    LS(LC(M)): $$mdi:microphone-off$$
+    LC(NUMBER_0): $$material:1x_mobiledata$$
+    PRINTSCREEN: $$material:screenshot_region$$
+    LG(TAB): $$mdi:view-dashboard-outline$$
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
