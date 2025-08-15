@@ -182,49 +182,49 @@ layers:
   - {t: '$$tabler:fold-down$$', type: trans}
   NUM:
   - '{'
-  - {t: /, s: '?'}
+  - '*'
   - '7'
   - '8'
   - '9'
-  - '*'
+  - +
   - '~'
-  - {t: '`', s: '~'}
-  - {t: '''', s: '"'}
-  - '"'
-  - ^
+  - '&backquote'
+  - '&quote'
+  - '&doublequote'
+  - '&caret'
   - '}'
-  - {t: '[', s: '{'}
   - (
+  - {t: /, s: '?'}
   - '4'
   - '5'
   - '6'
-  - +
+  - {t: '-', s: _}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
+  - '&pipe'
   - )
-  - {t: ']', s: '}'}
-  - {t: '$$tabler:fold-down$$', type: trans}
+  - {t: '[', s: '{'}
   - '0'
   - '1'
   - '2'
   - '3'
-  - {t: '-', s: _}
-  - '!'
-  - '@'
-  - '#'
-  - '&'
   - '%'
-  - $
-  - '&dbl_ctrl'
-  - '&dbl_shft'
+  - '!'
+  - '&at'
+  - '&hash'
+  - '&amp'
+  - '&dollar'
+  - {t: ']', s: '}'}
+  - '&DBLCTL'
+  - '&DBLSFT'
   - $$mdi:mouse-right-click-outline$$
   - {t: '=', h: '$$mdi:apple-keyboard-shift$$', s: +}
   - {t: ., h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$tabler:fold-down$$', type: trans}
   - {type: held}
-  - '|'
+  - _
   FUN:
   - {t: '$$tabler:fold-down$$', type: trans}
   - {t: '$$tabler:fold-down$$', type: trans}
@@ -316,21 +316,21 @@ layers:
   - {t: '$$tabler:fold-down$$', type: trans}
   - {t: '$$tabler:fold-down$$', type: trans}
 combos:
-- p: [7, 8]
+- p: [8, 9]
   k: '&winmvright'
   l: [QWRT]
-- p: [31, 32]
+- p: [7, 8, 9]
   k: '&winmvleft'
   l: [QWRT]
-- p: [20, 21]
+- p: [21, 22]
   k: {t: ;, s: ':'}
   l: [QWRT]
-- p: [18, 19]
+- p: [19, 20]
   k: ':'
   l: [QWRT]
-- p: [2, 1]
+- p: [2, 3]
   k: '&braces'
-- p: [23, 24]
+- p: [26, 27]
   k: '&brackets'
-- p: [11, 12]
+- p: [14, 15]
   k: '&parenthesis'
