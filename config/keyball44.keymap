@@ -160,25 +160,169 @@
     combos {
         compatible = "zmk,combos";
 
-        bootloader_r {
-            bindings = <&bootloader>;
-            key-positions = <23 11>;
+        win_mv_right {
+            bindings = <&winmvright>;
+            key-positions = <7 8>;
+            slow-release;
+            layers = <0>;
+        };
+
+        win_mv_left {
+            bindings = <&winmvleft>;
+            key-positions = <31 32>;
+            slow-release;
+            layers = <0>;
+        };
+
+        semicolon {
+            bindings = <&kp SEMI>;
+            key-positions = <20 21>;
+            layers = <0>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <18 19>;
+            layers = <0>;
+        };
+
+        braces {
+            bindings = <&braces>;
+            key-positions = <2 1>;
+        };
+
+        brackets {
+            bindings = <&brackets>;
+            key-positions = <23 24>;
+        };
+
+        parenthesis {
+            bindings = <&parenthesis>;
+            key-positions = <11 12>;
         };
     };
 
     macros {
-        dbl_shft: dbl_shft {
+        DBLSFT: DBLSFT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT &kp LEFT_SHIFT>;
-            label = "DBL_SHFT";
+            label = "DBLSFT";
         };
 
-        dbl_ctrl: dbl_ctrl {
+        DBLCTL: DBLCTL {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LCTRL &kp LCTRL>;
-            label = "DBL_CTRL";
+            label = "DBLCTL";
+        };
+
+        winmvright: winmvright {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp RIGHT>,
+                <&macro_release>,
+                <&kp RIGHT &kp LEFT_WIN>;
+
+            label = "WINMVRIGHT";
+        };
+
+        winmvleft: winmvleft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT &kp LEFT_WIN>;
+
+            label = "WINMVLEFT";
+        };
+
+        at: at {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp AT_SIGN>;
+            label = "AT";
+        };
+
+        hash: hash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp HASH>;
+            label = "HASH";
+        };
+
+        amp: amp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp AMPERSAND>;
+            label = "AMP";
+        };
+
+        dollar: doller {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp DOLLAR>;
+            label = "DOLLER";
+        };
+
+        backquote: backquote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp GRAVE>;
+            label = "BACKQUOTE";
+        };
+
+        quote: quote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp SINGLE_QUOTE>;
+            label = "QUOTE";
+        };
+
+        doublequote: doublequote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp DOUBLE_QUOTES>;
+            label = "DOUBLEQUOTE";
+        };
+
+        caret: caret {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp CARET>;
+            label = "CARET";
+        };
+
+        pipe: pipe {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp PIPE>;
+            label = "PIPE";
+        };
+
+        parenthesis: parenthesis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
+            label = "PARENTHESIS";
+        };
+
+        brackets: brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "BRACKETS";
+        };
+
+        braces: braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            label = "BRACES";
         };
     };
 
