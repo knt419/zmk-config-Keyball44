@@ -316,5 +316,21 @@ layers:
   - {t: '$$tabler:fold-down$$', type: trans}
   - {t: '$$tabler:fold-down$$', type: trans}
 combos:
-- p: [23, 11]
-  k: $$mdi:progress-download$$
+- p: [7, 8]
+  k: '&winmvright'
+  l: [QWRT]
+- p: [31, 32]
+  k: '&winmvleft'
+  l: [QWRT]
+- p: [20, 21]
+  k: {t: ;, s: ':'}
+  l: [QWRT]
+- p: [18, 19]
+  k: ':'
+  l: [QWRT]
+- p: [2, 1]
+  k: '&braces'
+- p: [23, 24]
+  k: '&brackets'
+- p: [11, 12]
+  k: '&parenthesis'
