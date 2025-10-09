@@ -70,43 +70,40 @@
 
         win_mv_right {
             bindings = <&winmvright>;
-            key-positions = <8 9>;
+            key-positions = <9 10>;
             slow-release;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         win_mv_left {
             bindings = <&winmvleft>;
-            key-positions = <7 8 9>;
+            key-positions = <1 2>;
             slow-release;
-            layers = <0>;
-        };
-
-        semicolon {
-            bindings = <&kp SEMI>;
-            key-positions = <21 22>;
-            layers = <0>;
-        };
-
-        colon {
-            bindings = <&kp COLON>;
-            key-positions = <19 20>;
-            layers = <0>;
+            layers = <0 1>;
         };
 
         braces {
             bindings = <&braces>;
             key-positions = <2 3>;
+            layers = <0 1>;
         };
 
         brackets {
             bindings = <&brackets>;
             key-positions = <26 27>;
+            layers = <0 1>;
         };
 
         parenthesis {
             bindings = <&parenthesis>;
             key-positions = <14 15>;
+            layers = <0 1>;
+        };
+
+        jis_ime {
+            bindings = <&kp LA(GRAVE)>;
+            key-positions = <8 9>;
+            layers = <0 1>;
         };
     };
 
@@ -240,10 +237,10 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&lt 6 ESCAPE    &kp Q               &kp W             &kp MINUS             &kp R                    &holdtap LC(Z) Z                     &holdtap LC(X) X  &kp D  &holdtap LG(E) E  &kp L                 &kp P                     &kp SQT
-&mt LCTRL TAB   &kp I               &kp T             &holdtap LC(A) A      &kp K                    &kp G                                &kp H             &kp N  &kp O             &kp U                 &holdtap LC(S) S          &kp SEMICOLON
-&kp LEFT_SHIFT  &kp SLASH           &holdtap LC(F) F  &holdtap LC(C) C      &kp M                    &kp B                                &kp J             &kp Y  &holdtap LC(V) V  &holdtap LG(V) COMMA  &holdtap QUESTION PERIOD  &kp BACKSLASH
-&mkp RCLK       &mt LEFT_ALT LANG2  &mkp LCLK         &mt LEFT_SHIFT SPACE  &mt LEFT_GUI LANGUAGE_1                        &lt_bsdel 5 0  &lt 4 ENTER                                                      &kp PRINTSCREEN
+&lt 6 ESCAPE                   &kp Q               &kp W      &kp MINUS             &kp R                    &kp Z                     &kp X        &kp D  &holdtap LG(E) E  &kp L                &kp P                     &kp SQT
+&mt LCTRL TAB                  &kp I               &kp T      &holdtap LC(A) A      &kp K                    &kp G                     &kp H        &kp N  &kp O             &kp U                &kp S                     &kp SEMICOLON
+&holdtap LEFT_SHIFT LC(LS(M))  &kp SLASH           &kp F      &holdtap LC(C) C      &kp M                    &kp B                     &kp J        &kp Y  &kp V             &holdtap EXCL COMMA  &holdtap QUESTION PERIOD  &kp BACKSLASH
+&mkp RCLK                      &mt LEFT_ALT LANG2  &mkp LCLK  &mt LEFT_SHIFT SPACE  &mt LEFT_GUI LANGUAGE_1             &lt_bsdel 5 0  &lt 4 ENTER                                                &kp PRINTSCREEN
             >;
         };
 
@@ -280,20 +277,20 @@
         number_layer {
             label = "NUM";
             bindings = <
-&kp LEFT_BRACE        &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9         &kp PLUS                 &kp TILDE        &backquote  &quote  &doublequote  &caret     &kp RIGHT_BRACE
-&kp LEFT_PARENTHESIS  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5          &kp NUMBER_6         &kp MINUS                &kp LEFT         &kp DOWN    &kp UP  &kp RIGHT     &pipe      &kp RIGHT_PARENTHESIS
-&kp LEFT_BRACKET      &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2          &kp NUMBER_3         &kp PERCENT              &kp EXCLAMATION  &at         &hash   &amp          &dollar    &kp RIGHT_BRACKET
-&DBLCTL               &DBLSFT       &mkp RCLK     &mt LEFT_SHIFT EQUAL  &mt LEFT_ALT PERIOD                   &trans  &trans                                             &kp UNDER
+&kp LEFT_BRACE        &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8          &kp NUMBER_9         &kp PLUS               &kp TILDE        &backquote  &quote  &doublequote  &caret       &kp RIGHT_BRACE
+&kp LEFT_PARENTHESIS  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5          &kp NUMBER_6         &kp MINUS              &kp LEFT         &kp DOWN    &kp UP  &kp RIGHT     &kp PERCENT  &kp RIGHT_PARENTHESIS
+&kp LEFT_BRACKET      &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2          &kp NUMBER_3         &kp COLON              &kp EXCLAMATION  &at         &hash   &amp          &dollar      &kp RIGHT_BRACKET
+&DBLCTL               &DBLSFT       &mkp RCLK     &mt LEFT_SHIFT EQUAL  &mt LEFT_ALT PERIOD                 &trans  &trans                                             &kp UNDER
             >;
         };
 
         function_layer {
             label = "FUN";
             bindings = <
-&trans  &trans  &kp F7     &kp F8     &kp F9     &kp LG(V)              &kp INS   &kp DEL        &kp PRINTSCREEN  &kp PAUSE_BREAK  &trans  &trans
-&trans  &trans  &kp F4     &kp F5     &kp F6     &kp LC(C)              &kp HOME  &kp PAGE_DOWN  &kp PG_UP        &kp END          &trans  &trans
-&trans  &trans  &kp F1     &kp F2     &kp F3     &kp LC(V)              &trans    &trans         &trans           &trans           &trans  &trans
-&trans  &trans  &mkp MCLK  &kp LC(Z)  &kp LC(Y)                 &trans  &trans                                                     &trans
+&trans  &trans  &kp F7     &kp F8     &kp F9     &kp F12              &kp INS   &kp DEL        &kp PRINTSCREEN  &kp PAUSE_BREAK  &trans  &trans
+&trans  &trans  &kp F4     &kp F5     &kp F6     &kp F11              &kp HOME  &kp PAGE_DOWN  &kp PG_UP        &kp END          &trans  &trans
+&trans  &trans  &kp F1     &kp F2     &kp F3     &kp F10              &trans    &trans         &trans           &trans           &trans  &trans
+&trans  &trans  &mkp MCLK  &kp LC(Z)  &kp LC(Y)               &trans  &trans                                                     &trans
             >;
         };
 
