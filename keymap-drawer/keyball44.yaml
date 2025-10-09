@@ -6,8 +6,8 @@ layers:
   - W
   - {t: '-', s: _}
   - R
-  - {t: Z, h: Ctl+Z}
-  - {t: X, h: Ctl+X}
+  - Z
+  - X
   - D
   - {t: E, h: Gui+E}
   - L
@@ -23,18 +23,18 @@ layers:
   - N
   - O
   - U
-  - {t: S, h: Ctl+S}
+  - S
   - {t: ;, s: ':'}
-  - $$mdi:apple-keyboard-shift$$
+  - {t: Ctl+Sft+M, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: /, s: '?'}
-  - {t: F, h: Ctl+F}
+  - F
   - {t: C, h: Ctl+C}
   - M
   - B
   - J
   - Y
-  - {t: V, h: Ctl+V}
-  - {t: ',', h: V, s: <}
+  - V
+  - {t: ',', h: '!', s: <}
   - {t: ., h: '?'}
   - {t: \, s: '|'}
   - $$mdi:mouse-right-click-outline$$
@@ -203,14 +203,14 @@ layers:
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
-  - '&pipe'
+  - '%'
   - )
   - {t: '[', s: '{'}
   - '0'
   - '1'
   - '2'
   - '3'
-  - '%'
+  - ':'
   - '!'
   - '&at'
   - '&hash'
@@ -231,7 +231,7 @@ layers:
   - F7
   - F8
   - F9
-  - {t: V, h: '$$mdi:apple-keyboard-command$$'}
+  - F12
   - INS
   - $$mdi:backspace-reverse-outline$$
   - $$material:screenshot_region$$
@@ -243,7 +243,7 @@ layers:
   - F4
   - F5
   - F6
-  - Ctl+C
+  - F11
   - HOME
   - PgDn
   - PG UP
@@ -255,7 +255,7 @@ layers:
   - F1
   - F2
   - F3
-  - Ctl+V
+  - F10
   - {t: '$$tabler:fold-down$$', type: trans}
   - {t: '$$tabler:fold-down$$', type: trans}
   - {t: '$$tabler:fold-down$$', type: trans}
@@ -316,21 +316,23 @@ layers:
   - {t: '$$tabler:fold-down$$', type: trans}
   - {t: '$$tabler:fold-down$$', type: trans}
 combos:
-- p: [8, 9]
+- p: [9, 10]
   k: '&winmvright'
-  l: [QWRT]
-- p: [7, 8, 9]
+  l: [QWRT, MOUSE]
+- p: [1, 2]
   k: '&winmvleft'
-  l: [QWRT]
-- p: [21, 22]
-  k: {t: ;, s: ':'}
-  l: [QWRT]
-- p: [19, 20]
-  k: ':'
-  l: [QWRT]
+  l: [QWRT, MOUSE]
 - p: [2, 3]
   k: '&braces'
+  l: [QWRT, MOUSE]
 - p: [26, 27]
   k: '&brackets'
+  l: [QWRT, MOUSE]
 - p: [14, 15]
   k: '&parenthesis'
+  l: [QWRT, MOUSE]
+- p: [8, 9]
+  k: Alt+`
+  l: [QWRT, MOUSE]
+- p: [19, 20]
+  k: {t: Ctl+V, h: V}
